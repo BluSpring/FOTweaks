@@ -4,6 +4,7 @@
   "package": "xyz.bluspring.fotweaks.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "apothic_attributes.toggle_elytra_flight.IItemExtensionMixin",
     "spawn.disable_flies.FlyCapabilityProviderMixin"
   ],
   "client": [
@@ -13,5 +14,8 @@
   },
   "overwrites": {
     "requireAnnotations": true
+  },
+  "mixinextras": {
+    "minVersion": "0.5.3"
   }
 }

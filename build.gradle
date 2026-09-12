@@ -107,10 +107,19 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+    maven { url "https://maven.bawnorton.com/releases" }
 }
 
 dependencies {
     implementation "maven.modrinth:spawn-mod:4.0.7-neoforge,1.21.1"
+    implementation "maven.modrinth:apotheosis:1.21.1-8.8.0"
+    implementation "maven.modrinth:apothic-attributes:1.21.1-2.10.1"
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.3"))
+    implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.7-beta.3") {
+        version {
+            it.prefer("[0.3.7-beta.3,)")
+        }
+    })
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
