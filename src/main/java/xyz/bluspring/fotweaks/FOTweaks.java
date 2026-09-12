@@ -37,7 +37,7 @@ public class FOTweaks {
         });
 
         NeoForge.EVENT_BUS.addListener((PlayerEvent.PlayerLoggedInEvent event) -> {
-            if (event.getEntity() instanceof ServerPlayer player) {
+            if (event.getEntity() instanceof ServerPlayer player && player.connection.hasChannel(SetElytraFlightStatusPacket.TYPE)) {
                 player.connection.send(new SetElytraFlightStatusPacket(player.getData(ELYTRA_FLIGHT_STATUS)));
             }
         });
