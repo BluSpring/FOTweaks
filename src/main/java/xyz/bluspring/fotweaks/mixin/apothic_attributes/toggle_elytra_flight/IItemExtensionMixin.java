@@ -5,6 +5,7 @@ import com.llamalad7.mixinextras.expression.Definition;
 import com.llamalad7.mixinextras.expression.Expression;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,6 +13,7 @@ import xyz.bluspring.fotweaks.FOTweaks;
 
 import net.minecraft.world.entity.LivingEntity;
 
+@IfModLoaded("apothic_attributes")
 @Mixin(value = IItemExtension.class, priority = 1050)
 public interface IItemExtensionMixin {
     @Definition(id = "entity", local = @Local(type = LivingEntity.class, argsOnly = true))

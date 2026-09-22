@@ -17,5 +17,6 @@
   },
   "mixinextras": {
     "minVersion": "0.5.3"
-  }
+  },
+  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin"
 }
